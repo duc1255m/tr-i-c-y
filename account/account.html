@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài khoản của tôi | Hải Nam</title>
+  <link rel="stylesheet" href="account.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+<div class="logo" id="logo">
+      <span >🥝GREENBASKET</span>
+    </div>
+    <nav class="menu">
+      <a href="../login.html">Trang chủ</a>
+      <a href="../product2.html">Sản phẩm</a>
+      <a href="../help2.html">Giới thiệu</a>
+      <a href="../contact2.html">Liên hệ</a>
+    </nav>
+
+    <div class="user-info">
+      <img src="../images/4.jpg" alt="User Avatar">
+      <span class="username">Xin chào, <b>Hải Nam</b></span>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ACCOUNT AREA ===== -->
+  <section class="account-section">
+    <div class="sidebar">
+      <h3>Tài khoản của tôi</h3>
+      <ul>
+        <li class="active"><i class="fa-solid fa-box"></i> Đơn đặt hàng</li>
+        <li><i class="fa-solid fa-map-location-dot"></i> Địa chỉ</li>
+        <li><i class="fa-solid fa-file-invoice"></i> Chi tiết đơn hàng</li>
+        <li><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Đơn đặt hàng gần đây</h2>
+      <table class="order-table">
+        <thead>
+          <tr>
+            <th>Mã đơn</th>
+            <th>Ngày đặt</th>
+            <th>Trạng thái</th>
+            <th>Tổng tiền</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#12345</td>
+            <td>20/10/2025</td>
+            <td><span class="status delivered">Đã giao</span></td>
+            <td>2.350.000₫</td>
+            <td><button>Xem chi tiết</button></td>
+          </tr>
+          <tr>
+            <td>#12344</td>
+            <td>15/10/2025</td>
+            <td><span class="status pending">Đang xử lý</span></td>
+            <td>1.500.000₫</td>
+            <td><button>Xem chi tiết</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+   <script src="account.js"></script> 
+</body>
+</html>

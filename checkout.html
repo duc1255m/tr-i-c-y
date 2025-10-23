@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GENTLEMAN</title>
+  <link rel="stylesheet" href="checkout.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo" id="logo"> 🥝GREENBASKET</div>
+
+
+    <nav id="menu">
+      <a href="login.html">Trang chủ</a>
+      <a href="product2.html">Sản phẩm</a>
+      <a href="help2.html">Giới thiệu</a>
+      <a href="contact2.html">Liên hệ</a>
+    </nav>
+
+    <div class="auth-buttons">
+      <button class="signup-btn"id="openLoginBtn">TÀI KHOẢN CỦA TÔI</button>
+    </div>
+
+    <button id="menuToggle">☰</button>
+  </header>
+
+   <div class="checkout-container">
+    <form class="checkout-form">
+      <h3>Thông tin giao hàng</h3>
+      <input type="text" placeholder="Nhập họ và tên" required>
+      <input type="tel" placeholder="Nhập số điện thoại" required>
+      <input type="email" placeholder="Nhập email (không bắt buộc)">
+      <input type="text" placeholder="Quốc gia" value="Vietnam" disabled>
+      <input type="text" placeholder="Địa chỉ, tên đường">
+      <input type="text" placeholder="Tỉnh/TP, Quận/Huyện, Phường/Xã">
+
+      <h3>Phương thức giao hàng</h3>
+      <input type="text" placeholder="Nhập địa chỉ để xem các phương thức giao hàng">
+
+      <h3>Phương thức thanh toán</h3>
+      <div class="payment-method">
+        <label>
+          <input type="radio" name="payment" checked>
+          Thanh toán khi giao hàng (không áp dụng đơn hàng dưới 1.000.000)
+        </label>
+        <label>
+          <input type="radio" name="payment">
+          Chuyển khoản qua QR - BIDV
+        </label>
+      </div>
+
+      <textarea placeholder="Ghi chú đơn hàng"></textarea>
+    </form>
+
+    <div class="checkout-summary">
+      <div class="cart-item">
+        <img src="images/F4.jpg" alt="Sản phẩm">
+        <div>
+          <p class="product-name">Táo FUJI khắc chữ</p>
+          <div class="quantity-control">
+            <button onclick="changeQuantity(-1)">-</button>
+            <input id="quantity" type="text" value="1" readonly>
+            <button onclick="changeQuantity(1)">+</button>
+          </div>
+          <p class="product-price">9,660,000đ</p>
+        </div>
+      </div>
+
+      <div class="discount-code">
+        <label>Mã khuyến mãi</label>
+        <input type="text" placeholder="Nhập mã khuyến mãi">
+        <button>Áp dụng</button>
+      </div>
+
+      <div class="order-summary">
+        <p>Tổng tiền hàng: <span id="subtotal">9,660,000đ</span></p>
+        <p>Phí vận chuyển: <strong>Miễn phí</strong></p>
+        <p class="total">Tổng thanh toán: <span id="total">9,660,000đ</span></p>
+      </div>
+
+      <button class="place-order">Đặt hàng</button>
+    </div>
+  </div>
+
+
+
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <div class="logo"> 🥝GREENBASKET</div>
+      </div>
+
+      <!-- Thông tin công ty -->
+      <div class="footer-col">
+        <h4>Thông tin công ty</h4>
+        <p><strong>CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ ĐẦU TƯ K.L.E.V.E</strong></p>
+        <p>Số đăng ký kinh doanh: 010162217</p>
+        <p>Địa chỉ: Lô A2, CN5, Cụm Công Nghiệp Từ Liêm, Phường Xuân Phương, TP Hà Nội</p>
+        <p>Hotline: 0974.749.899 / 0963.658.185</p>
+      </div>
+
+      <!-- Chính sách -->
+      <div class="footer-col">
+        <h4>Chính sách và Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Đổi trả 48h</a></li>
+          <li><a href="#">Chính sách khách hàng thân thiết</a></li>
+          <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+          <li><a href="#">Chính sách mua hàng trên Kênh GREENBASKETOnline</a></li>
+        </ul>
+      </div>
+
+      <!-- Quà tặng -->
+      <div class="footer-col">
+        <h4>Quà Tặng</h4>
+        <ul>
+          <li><a href="#">Tết Nguyên Đán</a></li>
+          <li><a href="#">Quốc tế Phụ nữ 08/03</a></li>
+          <li><a href="#">Lễ Tình nhân 14/03</a></li>
+        </ul>
+      </div>
+
+      <!-- Kênh liên hệ -->
+      <div class="footer-col">
+        <h4>Kênh liên hệ</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://i.imgur.com/1LqZ3iT.png" alt="Facebook"></a>
+          <a href="#"><img src="https://i.imgur.com/W1p88mH.png" alt="Instagram"></a>
+          <a href="#"><img src="https://i.imgur.com/Lnpyo3o.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

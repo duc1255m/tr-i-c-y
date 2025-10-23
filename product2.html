@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GREENBASKET </title>
+  <link rel="stylesheet" href="product2.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo" id="logo"> 🥝GREENBASKET</div>
+
+
+    <nav id="menu">
+      <a href="login.html">Trang chủ</a>
+      <a href="product2.html">Sản phẩm</a>
+      <a href="help2.html">Giới thiệu</a>
+      <a href="contact2.html">Liên hệ</a>
+    </nav>
+
+    <div class="auth-buttons">
+      <button class="signup-btn"id="openLoginBtn">TÀI KHOẢN CỦA TÔI</button>
+    </div>
+
+    <button id="menuToggle">☰</button>
+  </header>
+  <div class="container">
+    <!-- Sidebar Filter -->
+    <aside class="sidebar">
+      <div class="filter-group">
+        <h3>Danh mục sản phẩm</h3>
+        <label><input type="checkbox" class="category" value="traicay"> Trái cây nhập khẩu</label>
+        <label><input type="checkbox" class="category" value="qua"> Quà tặng trái cây</label>
+        <label><input type="checkbox" class="category" value="nuoc"> Nước ép & Sinh tố</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Xuất xứ</h3>
+        <label><input type="checkbox" class="origin" value="uc"> Úc</label>
+        <label><input type="checkbox" class="origin" value="nhat"> Nhật Bản</label>
+        <label><input type="checkbox" class="origin" value="my"> Mỹ</label>
+        <label><input type="checkbox" class="origin" value="vietnam"> Việt Nam</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Khoảng giá</h3>
+        <label><input type="radio" name="price" value="0-300"> Dưới 300.000đ</label>
+        <label><input type="radio" name="price" value="300-700"> 300.000đ - 700.000đ</label>
+        <label><input type="radio" name="price" value="700-1500"> 700.000đ - 1.500.000đ</label>
+        <label><input type="radio" name="price" value="1500-10000"> Trên 1.500.000đ</label>
+      </div>
+    </aside>
+
+    <!-- Product Section -->
+    <section class="product-section">
+      <div class="top-bar">
+        <h2>Danh sách sản phẩm</h2>
+        <select id="sort">
+          <option value="default">Sắp xếp</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+        </select>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </div>
+  <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <div class="logo"> 🥝GREENBASKET</div>
+      </div>
+
+      <!-- Thông tin công ty -->
+      <div class="footer-col">
+        <h4>Thông tin công ty</h4>
+        <p><strong>CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ ĐẦU TƯ K.L.E.V.E</strong></p>
+        <p>Số đăng ký kinh doanh: 010162217</p>
+        <p>Địa chỉ: Lô A2, CN5, Cụm Công Nghiệp Từ Liêm, Phường Xuân Phương, TP Hà Nội</p>
+        <p>Hotline: 0974.749.899 / 0963.658.185</p>
+      </div>
+
+      <!-- Chính sách -->
+      <div class="footer-col">
+        <h4>Chính sách và Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Đổi trả 48h</a></li>
+          <li><a href="#">Chính sách khách hàng thân thiết</a></li>
+          <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+          <li><a href="#">Chính sách mua hàng trên Kênh GREENBASKET Online</a></li>
+        </ul>
+      </div>
+
+      <!-- Quà tặng -->
+      <div class="footer-col">
+        <h4>Quà Tặng</h4>
+        <ul>
+          <li><a href="#">Tết Nguyên Đán</a></li>
+          <li><a href="#">Quốc tế Phụ nữ 08/03</a></li>
+          <li><a href="#">Lễ Tình nhân 14/03</a></li>
+        </ul>
+      </div>
+
+      <!-- Kênh liên hệ -->
+      <div class="footer-col">
+        <h4>Kênh liên hệ</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://i.imgur.com/1LqZ3iT.png" alt="Facebook"></a>
+          <a href="#"><img src="https://i.imgur.com/W1p88mH.png" alt="Instagram"></a>
+          <a href="#"><img src="https://i.imgur.com/Lnpyo3o.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="product2.js"></script>
+</body>
+</html>

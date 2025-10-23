@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+#menu {
+  display: flex;
+  gap: 25px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#menu a:hover {
+  color: #27ae60;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-btn {
+  background: #eee;
+  color: #333;
+}
+
+.signup-btn {
+  background: #27ae60;
+  color: white;
+}
+
+#menuToggle {
+  display: none;
+}
+
+
+/* ========================== */
+/* 💎 INTRO SECTION */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 10% 60px;
+  background: #fff;
+}
+
+.intro-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.intro-section .text {
+  flex: 1;
+}
+
+.intro-section .text h2 {
+  font-size: 22px;
+  color: #111;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-section .text p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.intro-section .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-section .image img {
+  width: 100%;
+  max-width: 470px;
+  border-radius: 10px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.intro-section .image img:hover {
+  transform: scale(1.03);
+}
+
+/* Hiệu ứng xuất hiện khi cuộn */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================== */
+/* FOOTER */
+.footer {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 40px 50px;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 130px;
+  margin-bottom: 15px;
+}
+
+.footer-col h4 {
+  color: #5b2c83;
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #6c2eb9;
+}
+
+.footer p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.verified-logo {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 28px;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+/* Toàn bộ section */
+.about-section {
+  background-color: #27d3449a; /* Màu hồng pastel nhẹ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  min-height: 90vh;
+}
+
+/* Container chia 2 bên */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 80px;
+}
+
+/* Hình ảnh */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Nội dung */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 22px;
+  color: #222;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .about-text h2 {
+    font-size: 20px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GREENBASKET </title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo"> 🥝GREENBASKET</div>
+
+
+    <nav id="menu">
+      <a href="../login.html">Trang chủ</a>
+      <a href="../product2.html">Sản phẩm</a>
+      <a href="../help2.html">Giới thiệu</a>
+      <a href="../contact2.html">Liên hệ</a>
+    </nav>
+
+    <div class="auth-buttons">
+      <button class="signup-btn"id="openLoginBtn">TÀI KHOẢN CỦA TÔI</button>
+    </div>
+
+    <button id="menuToggle">☰</button>
+  </header>
+
+  <main class="product-container">
+    <!-- Hình ảnh sản phẩm -->
+    <div class="product-images">
+      <div class="thumbnail-list">
+        <img src="images/thumb1.jpg" alt="">
+        <img src="images/thumb2.jpg" alt="">
+        <img src="images/thumb3.jpg" alt="">
+        <img src="images/thumb4.jpg" alt="">
+        <img src="images/thumb5.jpg" alt="">
+      </div>
+      <div class="main-image">
+        <img src="../images/F4.jpg" alt="Hồng Hàn Quốc">
+      </div>
+    </div>
+
+    <!-- Thông tin sản phẩm -->
+    <div class="product-info">
+      <h1>Táo Fuji Khắc Chữ</h1>
+      <p>Mã sản phẩm: web2200228-5 | Tình trạng: <span class="in-stock">Còn hàng</span> | Thương hiệu: New Zealand</p>
+      <div class="price">
+        <span class="current-price">1,499,000₫</span>
+        <span class="original-price">1,599,000₫</span>
+        <span class="discount">-6%</span>
+      </div>
+
+      <form class="product-options">
+        <div class="option-group">
+          <label><strong>Số lượng:</strong></label><br>
+          <input type="radio" name="qty" checked> Hộp nguyên đai - 06 quả<br>
+          <input type="radio" name="qty"> 04 quả - 0.92 - 1.04kg<br>
+          <input type="radio" name="qty"> 05 quả - 1.15 - 1.3kg<br>
+          <input type="radio" name="qty"> 06 quả - 1.38 - 1.56kg<br>
+          <input type="radio" name="qty"> 05 quả + Hộp kính - 1.15 - 1.3kg<br>
+          <input type="radio" name="qty"> Hộp nguyên đai - 12 quả<br>
+        </div>
+
+        <div class="option-group">
+          <label><strong>Kích thước:</strong></label><br>
+          <input type="radio" name="size" checked> 22*16*5 (cm)<br>
+          <input type="radio" name="size"> 27*19*5 (cm)<br>
+          <input type="radio" name="size"> 25*25*10 (cm)<br>
+          <input type="radio" name="size"> 43*31*10 (cm)<br>
+        </div>
+
+        <div class="quantity-select">
+          <label>Số lượng:</label>
+          <button type="button" class="qty-btn">-</button>
+          <input type="text" value="1">
+          <button type="button" class="qty-btn">+</button>
+        </div>
+
+        <div class="buy-buttons">
+          <button type="button" class="add-to-cart">THÊM VÀO GIỎ</button>
+          <button type="button" class="buy-now">MUA NGAY</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Gợi ý sản phẩm -->
+  <section class="related-products">
+    <h2>Có thể bạn sẽ thích</h2>
+    <div class="related-list">
+      <div class="product-card">
+        <p>Việt Nam</p>
+        <h3>Dưa Giống Nhật Kobe</h3>
+        <p class="price">558,000₫</p>
+        <button>CHỌN MUA</button>
+      </div>
+      <div class="product-card">
+        <p>Việt Nam</p>
+        <h3>Dưa Đá Khoáng</h3>
+        <p class="price">592,000₫</p>
+        <button>CHỌN MUA</button>
+      </div>
+      <div class="product-card">
+        <p>Úc</p>
+        <h3>Quýt Summerina</h3>
+        <p class="price">269,000₫</p>
+        <button>CHỌN MUA</button>
+      </div>
+      <div class="product-card">
+        <p>Việt Nam</p>
+        <h3>Chanh Dây Giống</h3>
+        <p class="price">934,000₫</p>
+        <button>CHỌN MUA</button>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <div class="logo"> 🥝GREENBASKET</div>
+      </div>
+
+      <!-- Thông tin công ty -->
+      <div class="footer-col">
+        <h4>Thông tin công ty</h4>
+        <p><strong>CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ ĐẦU TƯ K.L.E.V.E</strong></p>
+        <p>Số đăng ký kinh doanh: 010162217</p>
+        <p>Địa chỉ: Lô A2, CN5, Cụm Công Nghiệp Từ Liêm, Phường Xuân Phương, TP Hà Nội</p>
+        <p>Hotline: 0974.749.899 / 0963.658.185</p>
+      </div>
+
+      <!-- Chính sách -->
+      <div class="footer-col">
+        <h4>Chính sách và Dịch vụ</h4>
+        <ul>
+          <li><a href="#">Đổi trả 48h</a></li>
+          <li><a href="#">Chính sách khách hàng thân thiết</a></li>
+          <li><a href="#">Chính sách bảo mật thông tin cá nhân</a></li>
+          <li><a href="#">Chính sách mua hàng trên Kênh GREENBASKET Online</a></li>
+        </ul>
+      </div>
+
+      <!-- Quà tặng -->
+      <div class="footer-col">
+        <h4>Quà Tặng</h4>
+        <ul>
+          <li><a href="#">Tết Nguyên Đán</a></li>
+          <li><a href="#">Quốc tế Phụ nữ 08/03</a></li>
+          <li><a href="#">Lễ Tình nhân 14/03</a></li>
+        </ul>
+      </div>
+
+      <!-- Kênh liên hệ -->
+      <div class="footer-col">
+        <h4>Kênh liên hệ</h4>
+        <div class="social-icons">
+          <a href="#"><img src="https://i.imgur.com/1LqZ3iT.png" alt="Facebook"></a>
+          <a href="#"><img src="https://i.imgur.com/W1p88mH.png" alt="Instagram"></a>
+          <a href="#"><img src="https://i.imgur.com/Lnpyo3o.png" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+#menu {
+  display: flex;
+  gap: 25px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#menu a:hover {
+  color: #27ae60;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-btn {
+  background: #eee;
+  color: #333;
+}
+
+.signup-btn {
+  background: #27ae60;
+  color: white;
+}
+
+#menuToggle {
+  display: none;
+}
+
+/* FOOTER */
+.footer {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  padding: 40px 50px;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 130px;
+  margin-bottom: 15px;
+}
+
+.footer-col h4 {
+  color: #5b2c83;
+  font-size: 15px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #6c2eb9;
+}
+
+.footer p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.verified-logo {
+  width: 100px;
+  margin-top: 10px;
+}
+
+.social-icons img {
+  width: 28px;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ================= CART PAGE ================= */
+.cart-container {
+  max-width: 900px;
+  margin: 120px auto 40px; /* cách xa navbar */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+h2,
+h3 {
+  color: rgb(22, 190, 58);
+  margin-bottom: 15px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  color: red;
+  font-weight: bold;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  background: #c00;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quantity button:hover {
+  background: #900;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* === GHI CHÚ === */
+.note-section {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  resize: none;
+}
+
+/* === TỔNG KẾT === */
+.summary {
+  margin-top: 20px;
+  border-top: 1px dashed #aaa;
+  padding-top: 15px;
+  text-align: right;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: rgb(19, 169, 89);
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+  background: rgb(15, 244, 27);
+}
+
+/* === SẢN PHẨM GỢI Ý === */
+.recommended {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.product-suggested {
+  flex: 0 0 150px;
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.product-suggested img {
+  width: 100%;
+  height: auto;
+}
+
+.product-suggested button {
+  background: rgb(22, 237, 80);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-suggested button:hover {
+  background: #900;
+}

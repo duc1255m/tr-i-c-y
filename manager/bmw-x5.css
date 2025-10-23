@@ -1,0 +1,429 @@
+body {
+  font-family: Arial, sans-serif;
+  color: rgb(6, 6, 6);
+  background-color:white;
+  line-height: 1.5;
+  padding-top: 150px;  /* 👈 chỉnh giá trị này để nội dung cách navbar */
+}
+/* ==================== RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  background: black;   /* trong suốt ban đầu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.886);  /* khi cuộn thì thành đen */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+}
+
+.navbar nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left, .nav-right {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-left a, .nav-right a {
+  position: relative;
+  color: rgb(249, 241, 241);
+  text-decoration: none;
+  font-size: 20px;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Hiệu ứng gạch chân */
+.nav-left a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #057af6;
+  transition: width 0.3s ease;
+}
+
+.nav-left a:hover::after,
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #057af6;
+}
+
+/* ==================== LOGO ==================== */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 20px;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: #f3efef;
+  transition: color 0.3s ease;
+  letter-spacing: 5px;
+}
+.logo a:hover {
+  color: #057af6;
+}
+
+/* <!-- ==================== CHI TIẾT XE ==================== */ */
+.back-link {
+  position: absolute;
+  top: -40px;        /* đẩy lên trên ảnh */
+  left: 0;
+  text-decoration: none;
+  color: #0071e3;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 10px;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ff6600;
+}
+
+.car-detail {
+  display: flex;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.car-left {
+  flex: 2;
+  position: relative; /* cần để .back-link absolute dựa theo car-left */
+}
+
+.car-right {
+  flex: 1;
+}
+
+.car-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.car-left h2 {
+  margin: 10px 0 5px;
+}
+
+.car-subtitle {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.car-specs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.spec-box {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background: #fafafa;
+  font-weight: bold;
+}
+
+.description, .features {
+  margin-top: 20px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 8px 0;
+  color: #444;
+}
+
+.price-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.price-box h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #222;
+}
+
+.price-box span {
+  font-size: 16px;
+  color: #666;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form label {
+  font-size: 14px;
+  color: #555;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.note {
+  font-size: 12px;
+  color: #777;
+  margin-top: 8px;
+}
+/* footer */
+.footer {
+  background: #fff;
+  padding: 50px 80px 20px;
+  font-family: Arial, sans-serif;
+  color: #555;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0d2f66;
+}
+
+.logo-icon {
+  font-size: 28px;
+  margin-right: 6px;
+}
+
+.highlight {
+  color: #0071e3;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #0071e3;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0071e3;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-bottom .footer-links a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #0071e3;
+}
+.credit {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+    padding: 10px 0;
+    background: white;
+    font-weight: 500;
+    transition: color 0.4s ease, transform 0.4s ease;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+/* Animation fadeInUp */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect */
+.credit:hover {
+    color: #ff6600;
+    transform: scale(1.05);
+}
+
+/* Popup ẩn mặc định */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Nội dung popup */
+.popup-content {
+  background: #fff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content h2 {
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.popup-content button {
+  background: #2ecc71;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background: #27ae60;
+}
+
+/* Hiệu ứng mờ dần */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
